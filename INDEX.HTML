@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+<section id="home">
 <div class="header">
     <div class="container">
         <div class="navbar">
@@ -18,22 +20,28 @@
             <img src="IMAGES/DOMSKI FOOT LOGO.png" alt="logo" width="125px">
         </div>
        <nav>
-            <ul class="nav-links">
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+            <ul id="MenuItems" class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="https://wa.me/message/IBYE7K5ABQWOI1" target="_blank">Contact</a></li>
             </ul>
        </nav> 
-       <img src="IMAGES/cart.svg" class="cart" width="40px" height="40px">
+    
+       <img src="IMAGES/cart.png" class="cart" width="40px" height="40px">
+       <img src="IMAGES/menu.png" class="menu-icon" 
+       onclick="menutoggle()" width="30px" height="30px">
     </div>
     <div class="row">
         <div class="col-2">
-            <h1>Walk into comfort.<br> and style with us! </h1>
+            <h1>Walk into comfort.<br> <span>and style with us!</span> </h1>
             <p>Dress the way you would want to be address.
             <br>Let your feet 
-            do the talking.</p></h1>
-                <a href="" class="btn">Shop Now &#8594;</a>
+            do the talking.</p>
+            <div class="shop-btn-container"> 
+                <a href="#products" class="btn">Shop Now &#8594;</a> 
+            </div>
+                     
         </div>
         <div class="col-2">
             <img src="IMAGES/White Double-Buckle Platform Slide Sandals.png" width="">
@@ -41,6 +49,7 @@
     </div>
     </div>
 </div>
+</section>
 
 <!------- featured categories -------->   
     <div class="categories">
@@ -59,7 +68,8 @@
         </div>
         
     </div>
-<!------- featured Products -------->   
+<!------- featured Products -------->  
+<section id="products">
     <div class="small-container">
         <h2 class="Title">Loafers Products</h2>
         <div class="row">
@@ -188,6 +198,88 @@
             </div>
         </div>
     </div>
+</section>
+    <!------- Offers --------> 
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="IMAGES/7b.png" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p>Exclusively Available on Domski Foot Hub</p>
+                        <h1>Set of Loafers</h1>
+                        <small>Double up and save. Unlock an exclusive discount on your second pair of shoes. </small>
+                        <a href="" class="btn">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meet the CEO Section -->
+
+<section class="meet-ceo"> 
+    <div class="ceo-container">
+        <!-- CEO Image --> 
+         <div class="ceo-image"> 
+            <img src="IMAGES/ceo.png" alt="CEO of Domski Foot Hub" width="600px"> 
+        </div>
+       <!-- CEO Information --> 
+        <div class="ceo-content"> 
+            <p class="section-subtitle">LEADERSHIP & VISION</p> 
+            <h2>Meet Our CEO</h2> 
+            <h3>Nwadiogbu Dominic Odinakachukwu</h3> 
+            <span class="ceo-position"> Founder & Chief Executive Officer
+            </span>   
+            <p class="ceo-description"> Welcome to Domski Foot Hub! My passion for footwear and commitment to quality inspired me to create a 
+                brand that combines style, comfort, and affordability. <br> At Domski Foot Hub, we believe that every step matters. Our mission 
+                is to provide our customers with quality footwear that complements their style and confidence. We are committed to delivering 
+                excellent products and outstanding customer service.</p>
+            <p class="ceo-quote"> "Our goal is not just to sell shoes, but to help every customer step out with confidence."    
+            </p>
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+            </div>
+        <div class="socials">
+            <a href="https://web.facebook.com/dominic.nwadiogbu?_rdc=2&_rdr#" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="https://wa.me/message/IBYE7K5ABQWOI1" target="_blank"><i class="fab fa-Whatsapp"></i>WhatsApp</a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://www.tiktok.com/@dominic.domski?_r=1&_t=ZN-9ApPLf0FUQN" target="_blank"><i class="fab fa-tiktok"></i>Tiktok</a>
+        </div>
+
+</div>
+</section>  
+
+<!-- FOOTER -->
+<footer class="about-footer">
+
+    <h3>DOMSKI <span>FOOT HUB</span></h3>
+
+    <p>Style. Comfort. Confidence.</p>
+
+    <p class="copyright">
+        &copy; 2026/27 Domski Foot Hub. All rights reserved.
+    </p>
+    
+</footer>
+<!----------js for toggle menu----------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+              
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px"
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px";
+                }
+        }
+
+    </script>
 
 </body>
 </html>
